@@ -1040,6 +1040,92 @@
     .timeline::before { left: 20px; }
   }
   @media (max-width: 600px) {
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .hero-name {
+    font-size: 4.5rem;
+    line-height: 0.9;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+
+  .hero-desc {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-outline,
+  .btn-whatsapp {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-avatar-wrap {
+    width: 220px;
+    height: 270px;
+  }
+
+  .about-stat-badge {
+    transform: scale(0.85);
+  }
+
+  .skills-grid,
+  .portfolio-grid,
+  .cert-grid,
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    gap: 1rem;
+  }
+
+  .timeline-card {
+    padding: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .project-thumb {
+    height: 160px;
+  }
+
+  nav {
+    padding: 1rem 5%;
+  }
+
+  .mobile-menu a {
+    font-size: 2rem;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
     section { padding: 5rem 4%; }
     .portfolio-grid { grid-template-columns: 1fr; }
     .cert-grid { grid-template-columns: 1fr; }
