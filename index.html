@@ -403,7 +403,12 @@
     margin: 3rem auto 0;
   }
   .about-visual {
-    position: relative;
+   .about-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
   }
   .about-avatar-wrap {
     position: relative;
@@ -419,8 +424,8 @@
     border: 1px solid var(--border2);
   }
   .about-avatar-inner {
-    position: absolute;
-    inset: 20px;
+    border-radius: 50%;
+overflow: hidden;
     background: linear-gradient(145deg, var(--bg3), var(--bg2));
     border-radius: 8px;
     display: flex;
@@ -434,7 +439,7 @@
     overflow: hidden;
   }
   .about-avatar-inner::after {
-    content: 'PF';
+    content: '';
     background: linear-gradient(135deg, var(--red2), var(--purple2));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -444,6 +449,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
   .about-corner {
     position: absolute;
@@ -1032,7 +1038,9 @@
   /* ────────────────── RESPONSIVE ────────────────── */
   @media (max-width: 900px) {
     .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .about-avatar-wrap { width: 260px; height: 310px; }
+    .about-avatar-wrap { box-shadow:
+0 0 30px rgba(255,45,85,0.4),
+0 0 80px rgba(168,85,247,0.3);; }
     .about-stat-badge.one { left: 0; bottom: -15px; }
     .about-stat-badge.two { right: 0; top: 20px; }
     .nav-links { display: none; }
@@ -1042,8 +1050,17 @@
   @media (max-width: 600px) {
 @media (max-width: 768px) {
 
-  body {
-    overflow-x: hidden;
+  .about-avatar-wrap {
+  margin: auto;
+}
+
+.about-visual {
+  justify-content: center;
+}
+
+.about-grid {
+  grid-template-columns: 1fr;
+  text-align: center;
   }
 
   .hero-name {
