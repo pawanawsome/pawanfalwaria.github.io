@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pawan Falwaria – Digital Marketing Executive</title>
+<title>Pawan Falwaria – Digital Marketing Expert</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
@@ -433,12 +433,7 @@
     border: 1px solid var(--border);
     overflow: hidden;
   }
-  .about-avatar-inner::after {
-    content: 'PF';
-    background: linear-gradient(135deg, var(--red2), var(--purple2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+ 
   }
   .about-corner {
     position: absolute;
@@ -930,10 +925,10 @@
     margin-bottom: 0.4rem;
   }
   .cc-val {
-    font-size: 0.95rem;
-    color: var(--text);
-    font-weight: 500;
-    word-break: break-all;
+   word-break: break-word;
+  overflow-wrap: break-word;
+  font-size: 0.95rem;
+  line-height: 1.6;
   }
   .contact-actions {
     display: flex;
@@ -1038,7 +1033,8 @@
     section { padding: 5rem 4%; }
     .portfolio-grid { grid-template-columns: 1fr; }
     .cert-grid { grid-template-columns: 1fr; }
-    .contact-cards { grid-template-columns: 1fr 1fr; }
+    .contact-cards {  grid-template-columns: 1fr;
+  gap: 1rem; }
     .skills-grid { grid-template-columns: 1fr 1fr; }
     footer { flex-direction: column; text-align: center; }
   }
@@ -1128,7 +1124,8 @@
     <div class="about-visual">
       <div class="about-avatar-wrap">
         <div class="about-avatar-bg"></div>
-        <div class="about-avatar-inner"></div>
+        <div class="about-avatar-inner"><img src="profile.jpg" alt="Pawan Falwaria">
+</div>
         <div class="about-corner tl"></div>
         <div class="about-corner br"></div>
       </div>
