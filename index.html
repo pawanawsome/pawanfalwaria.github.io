@@ -49,8 +49,7 @@
 
   /* ────────────────── NOISE GRAIN ────────────────── */
   body::before {
-    content: '';
-    position: fixed;
+  position: fixed;
     inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
     pointer-events: none;
@@ -97,7 +96,7 @@
     position: relative;
   }
   .nav-links a::after {
-    content: '';
+    content: 'Pawan Falwaria';
     position: absolute;
     bottom: -4px; left: 0;
     width: 0; height: 1px;
@@ -396,11 +395,9 @@
 
   .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
-    max-width: 1200px;
-    margin: 3rem auto 0;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
   }
   .about-visual {
    .about-visual {
@@ -415,6 +412,7 @@
     width: 320px;
     height: 380px;
     margin: 0 auto;
+    margin-top: -40px;
   }
   .about-avatar-bg {
     position: absolute;
@@ -449,7 +447,7 @@ overflow: hidden;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 15%;
 }
   .about-corner {
     position: absolute;
@@ -470,6 +468,7 @@ overflow: hidden;
     align-items: center;
     gap: 0.7rem;
     box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    z-index: 10;
   }
   .about-stat-badge.one { bottom: 30px; left: -30px; }
   .about-stat-badge.two { top: 40px; right: -30px; }
@@ -1037,8 +1036,12 @@ overflow: hidden;
 
   /* ────────────────── RESPONSIVE ────────────────── */
   @media (max-width: 900px) {
-    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .about-avatar-wrap { box-shadow:
+    .about-grid {   grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  text-align: center; }
+    .about-avatar-wrap { margin: auto;
 0 0 30px rgba(255,45,85,0.4),
 0 0 80px rgba(168,85,247,0.3);; }
     .about-stat-badge.one { left: 0; bottom: -15px; }
@@ -1050,17 +1053,23 @@ overflow: hidden;
   @media (max-width: 600px) {
 @media (max-width: 768px) {
 
-  .about-avatar-wrap {
-  margin: auto;
-}
+ .about-avatar-wrap {
+    margin: auto;
+  }
 
-.about-visual {
-  justify-content: center;
-}
+  .about-visual {
+    justify-content: center;
+  }
 
-.about-grid {
-  grid-template-columns: 1fr;
-  text-align: center;
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .about-info-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
   .hero-name {
@@ -1069,8 +1078,11 @@ overflow: hidden;
   }
 
   .hero-subtitle {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.6;
+  }
+
+}
     padding: 0 10px;
   }
 
