@@ -437,8 +437,15 @@
     object-position: center;
     display: block;
 }
-   .about-stat-badge.one { bottom: 30px; left: -30px; }
-  .about-stat-badge.two { top: 40px; right: -30px; }
+   .about-stat-badge.one {
+    bottom: 20px;
+    left: -40px;
+}
+
+.about-stat-badge.two {
+    top: 30px;
+    right: -40px;
+}
   .badge-num {
     font-family: var(--ff-display);
     font-size: 1.8rem;
@@ -1012,17 +1019,14 @@
 }
   @media (max-width: 900px) {
 
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
+    .about-stat-badge.one {
+    left: -10px;
+    bottom: -10px;
+}
 
-    .about-avatar-wrap {
-        width: 320px;
-        height: 420px;
-        margin: auto;
-    }
-
+.about-stat-badge.two {
+    right: -10px;
+    top: 10px;
 }
 
     .about-avatar-wrap {
@@ -1033,14 +1037,19 @@
 
 }
    @media (max-width: 600px) {
-    section { padding: 5rem 4%; }
-    .portfolio-grid { grid-template-columns: 1fr; }
-    .cert-grid { grid-template-columns: 1fr; }
-    .contact-cards {  grid-template-columns: 1fr;
-  gap: 1rem; }
-    .skills-grid { grid-template-columns: 1fr 1fr; }
-    footer { flex-direction: column; text-align: center; }
-  }
+   .about-stat-badge {
+    transform: scale(0.8);
+}
+
+.about-stat-badge.one {
+    left: -20px;
+    bottom: -20px;
+}
+
+.about-stat-badge.two {
+    right: -20px;
+    top: -10px;
+}
   @media (max-width: 380px) {
     .contact-cards { grid-template-columns: 1fr; }
     .skills-grid { grid-template-columns: 1fr; }
