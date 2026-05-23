@@ -431,10 +431,10 @@
     background: #111;
 }
   .about-avatar-inner img {
-    width: 100%;
+  width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center;
     display: block;
 }
    .about-stat-badge.one { bottom: 30px; left: -30px; }
@@ -1002,16 +1002,28 @@
   }
 
   /* ────────────────── RESPONSIVE ────────────────── */
-  @media (max-width: 900px) {
-    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .about-avatar-wrap { width: 260px; height: 310px; }
-    .about-stat-badge.one { left: 0; bottom: -15px; }
-    .about-stat-badge.two { right: 0; top: 20px; }
-    .nav-links { display: none; }
-    .hamburger { display: flex; }
-    .timeline::before { left: 20px; }
-  }
-  @media (max-width: 600px) {
+ @media (max-width: 600px) {
+
+   .about-avatar-wrap {
+    width: 260px;
+    height: 340px;
+    margin: auto;
+    }
+@media (max-width: 900px) {
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-avatar-wrap {
+        width: 320px;
+        height: 420px;
+        margin: auto;
+    }
+
+}
+   @media (max-width: 600px) {
     section { padding: 5rem 4%; }
     .portfolio-grid { grid-template-columns: 1fr; }
     .cert-grid { grid-template-columns: 1fr; }
