@@ -444,10 +444,11 @@ overflow: hidden;
     background-clip: text;
   }
   .about-avatar-inner img {
-  width: 100%;
+   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 15%;
+  object-position: center top;
+  display: block;
 }
   .about-corner {
     position: absolute;
@@ -1051,14 +1052,24 @@ overflow: hidden;
     .timeline::before { left: 20px; }
   }
   @media (max-width: 600px) {
-@media (max-width: 768px) {.about-stat-badge {
-  position: relative;
-  margin: 1rem auto;
-  left: auto;
-  right: auto;
-  top: auto;
-  bottom: auto;
-  transform: none;
+.about-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.about-avatar-wrap {
+  margin: 0 auto 2rem;
+}
+}
+
+.mobile-menu {
+  display: flex;
+}
+}
+
+.hamburger {
+  display: flex;
+}
 }
 
 .about-stat-badge.one,
@@ -1131,8 +1142,9 @@ overflow: hidden;
   }
 
   .about-avatar-wrap {
-    width: 220px;
-    height: 270px;
+ width: 260px;
+height: 320px;
+margin: 0 auto;
   }
 
   .about-stat-badge {
